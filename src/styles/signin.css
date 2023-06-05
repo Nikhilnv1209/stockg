@@ -1,0 +1,124 @@
+.navbar {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+  align-items: center;
+}
+
+.navbar__logo {
+  width: 6rem;
+  object-fit: fill;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem /* 12px */;
+}
+
+.nabvar__links button:nth-child(1) {
+  font-size: 0.875rem /* 14px */;
+  line-height: 1.25rem /* 20px */;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+.navbar__links button:nth-child(2) {
+  border-radius: 1.4rem /* 22.4px */;
+  width: 11rem /* 176px */;
+  padding: 0.5rem 0;
+  font-weight: 600;
+  font-size: 0.875rem /* 14px */;
+  line-height: 1.25rem /* 20px */;
+  background-color: #c7f609;
+}
+
+.navbar__backgroundtheme {
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  overflow: hidden;
+  z-index: -10;
+}
+
+.navbar__backgroundtheme div {
+  background-color: #c7f609;
+  border-radius: 9999px;
+  position: absolute;
+  width: 25.75rem /* 412px */;
+  height: 25.75rem /* 412px */;
+  filter: blur(15rem);
+}
+
+.navbar__backgroundtheme div:nth-child(1) {
+  left: -17%;
+  top: 10%;
+}
+
+.navbar__backgroundtheme div:nth-child(2) {
+  right: -10%;
+  bottom: -25%;
+}
+
+.navbar__backgroundtheme img {
+  pointer-events: none;
+  position: absolute;
+  object-fit: fill;
+}
+
+.navbar__backgroundtheme img:nth-child(3) {
+  width: 20%;
+  height: 30%;
+  top: 13%;
+}
+.navbar__backgroundtheme img:nth-child(4) {
+  width: 25%;
+  height: 45%;
+  top: 12%;
+  right: 5%;
+}
+.navbar__backgroundtheme img:nth-child(5) {
+  left: 0;
+}
+.navbar__backgroundtheme img:nth-child(6) {
+  width: 20%;
+  height: 16%;
+  right: 0;
+  bottom: 0;
+}
+
+/* apply media query for min-width:768px*/
+@media (min-width: 768px) {
+  .navbar {
+    padding: 0.25rem 2rem;
+  }
+
+  .navbar__logo {
+    width: 11.5rem /* 184px */;
+    height: 4.5rem /* 72px */;
+  }
+
+  .navbar__links {
+    gap: 3rem /* 48px */;
+  }
+
+  .navbar__links button:nth-child(1) {
+    font-size: 18px;
+  }
+  .navbar__links button:nth-child(2) {
+    font-size: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 16px;
+  }
+}
+
+@media not all and (min-width: 1024px) {
+  .navbar__backgroundtheme img {
+    display: none;
+  }
+}
