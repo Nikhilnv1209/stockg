@@ -1,10 +1,19 @@
 /** @type {import('tailwindcss').Config} */
+// css nesting
 export default {
+  mode: 'jit',
   content: ["./index.html",
   "./src/**/*.{js,ts,jsx,tsx}",],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'Mulish': ['Mulish', 'sans-serif'],
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    require('autoprefixer'),
+    require('tailwindcss'),
+    ]
 }
 
